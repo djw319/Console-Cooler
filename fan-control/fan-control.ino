@@ -40,9 +40,9 @@ void loop() {
   temperatureC = mpl115a2.getTemperature();
 
   //Control logic
-  if(temperatureC >= 25 && fanStatus == false){
+  if(temperatureC >= 30 && fanStatus == false){
     enableFan();
-  } else if(temperatureC <25 && fanStatus == true) {
+  } else if(temperatureC <23 && fanStatus == true) {
     disableFan();
   } else if(fanStatus == true){
     Serial.print("Fan On\t\tTemp(C): ");
